@@ -16,8 +16,8 @@ def get_strike_price(df, prob):
     #inverse cdf of normal distribution
     upper = norm.ppf(prob, loc = mean, scale = std)
     lower = norm.ppf(1-prob, loc = mean, scale = std)
-    call_strike_price = df['Close'][-1]*(1+upper).round(3)
-    put_strike_price = df['Close'][-1]*(1+lower).round(3)
+    call_strike_price = df['Close'][-1]*(1+upper)
+    put_strike_price = df['Close'][-1]*(1+lower)
 
     return returns, call_strike_price, put_strike_price
 
@@ -61,5 +61,5 @@ returns, call_strike_price, put_strike_price = get_strike_price(df, prob)
 cdf = norm.cdf(np.sort(returns), loc = np.mean(returns), scale = np.std(returns))    
 fig = px.line(x = np.sort(returns)*100, y = np.sort(cdf)*100, title = "Cumulative Distribution of Returns", labels={'x':'Change %', 'y':'Probability %'})
 st.plotly_chart(fig)
-st.write(f"Short call option with strike price: {call_strike_price}\n")
-st.write(f"Short put option with strike price: {put_strike_price}")
+st.write(f"Short call option with strike price: {call_strike_price.round(3)}\n")
+st.write(f"Short put option with strike price: {put_strike_price.round(3)}")
