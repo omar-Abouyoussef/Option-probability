@@ -21,6 +21,7 @@ def get_strike_price(df, prob):
 
     return returns, call_strike_price, put_strike_price
 
+st.set_page_config(page_title="Option Probability Lab")
 
 st.title('Option Probability Lab')
 #User input
@@ -61,5 +62,5 @@ returns, call_strike_price, put_strike_price = get_strike_price(df, prob)
 cdf = norm.cdf(np.sort(returns), loc = np.mean(returns), scale = np.std(returns))    
 fig = px.line(x = np.sort(returns)*100, y = np.sort(cdf)*100, title = "Cumulative Distribution of Returns", labels={'x':'Change %', 'y':'Probability %'})
 st.plotly_chart(fig)
-st.write(f"Short call option with strike price: {call_strike_price.round(3)}\n")
-st.write(f"Short put option with strike price: {put_strike_price.round(3)}")
+st.write(f"Short call option with strike price: {call_strike_price.round(1)}\n")
+st.write(f"Short put option with strike price: {put_strike_price.round(1)}")
