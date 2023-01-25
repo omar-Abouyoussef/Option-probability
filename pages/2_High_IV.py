@@ -7,7 +7,6 @@ import streamlit as st
 
 st.set_page_config(page_title="High IV Scanner")
 st.title("High Implied volatility Scanner")
-st.sidebar.header("High Implied volatility Scanner")
 
 data = obb.stocks.options.screen.screener_output(preset='high_IV.ini')[0]
 high_iv = data.iloc[:,1:10]
