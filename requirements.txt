@@ -60,6 +60,6 @@ urllib3==1.26.14
 validators==0.20.0
 watchdog==2.2.1
 webencodings==0.5.1
-yfinance==0.2.4
+yfinance==0.1.74
 zipp==3.11.0
 zope.interface==5.5.2
