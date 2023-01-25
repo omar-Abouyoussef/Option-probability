@@ -32,7 +32,6 @@ pandas==1.5.3
 Pillow==9.4.0
 plotly==5.13.0
 protobuf==3.20.1
-protobuf==3.20.3
 pyarrow==10.0.1
 pycparser==2.21
 pydeck==0.8.0
