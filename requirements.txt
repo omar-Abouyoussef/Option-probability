@@ -26,12 +26,12 @@ MarkupSafe==2.1.2
 mdurl==0.1.2
 multitasking==0.0.11
 numpy==1.24.1
-openbb==0.0.1
+openbb==0.0.2
 packaging==23.0
 pandas==1.5.3
 Pillow==9.4.0
 plotly==5.13.0
-protobuf==3.20.1
+protobuf==3.20.3
 pyarrow==10.0.1
 pycparser==2.21
 pydeck==0.8.0
@@ -60,6 +60,6 @@ urllib3==1.26.14
 validators==0.20.0
 watchdog==2.2.1
 webencodings==0.5.1
-yfinance==0.1.74
+yfinance==0.2.4
 zipp==3.11.0
 zope.interface==5.5.2
