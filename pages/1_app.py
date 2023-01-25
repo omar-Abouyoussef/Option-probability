@@ -7,7 +7,7 @@ import plotly.express as px
 import streamlit as st
 
 
-
+##################
 def get_strike_price(df, prob):
     returns = df['Close'].pct_change()
     mean = np.mean(returns)
@@ -20,6 +20,10 @@ def get_strike_price(df, prob):
     put_strike_price = df['Close'][-1]*(1+lower)
 
     return returns, call_strike_price, put_strike_price
+#################
+####################
+
+
 
 st.set_page_config(page_title="Option Probability Lab")
 st.title('Option Probability Lab')
