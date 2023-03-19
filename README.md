@@ -14,3 +14,10 @@ The app performs the following:
 Extremely usefull for selling OTM Options
 
 Streamlit App: https://omar-abouyoussef-option-probability-1-app-rks705.streamlit.app/
+
+### Technologies used
+1. Numpy
+2. Pandas
+3. Scipy
+4. Plotly
+5. Streamlit
